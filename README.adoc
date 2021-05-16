@@ -1,0 +1,24 @@
+= visual-mode.kak
+
+*visual-mode.kak* adds two user modes that emulate the visual modes of vim.
+The ``visual-mode`` command enters visual mode, and the ``visual-line-mode`` 
+command enters line-wise visual mode.
+Both take a single argument: the key press you bound to it.
+
+Visual block mode was not implemented because the selection copy command with C 
+covers this functionality.
+
+== Installation (plug.kak)
+
+[source,kakoune]
+----
+plug "https://gitlab.com/dead10ck/visual-mode.kak" demand visual-mode %{
+    map global normal v ': visual-mode v<ret>'
+    map global normal V ': visual-line-mode V<ret>'
+    map global normal <a-v> 'v'
+    map global normal <a-s-v> '<s-v>'
+    map global normal <a-s-v> '<s-v>'
+}
+----
+
+This would remap view mode to make room for visual mode, but any binding should do.

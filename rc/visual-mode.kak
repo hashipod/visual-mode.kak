@@ -8,8 +8,8 @@ provide-module visual-mode %{
     map global visual-mode l <s-l>
     map global visual-mode h <s-h>
     map global visual-mode j <s-j>
-    map global visual-mode k <s-j>
-    map global visual-mode x <s-j>
+    map global visual-mode k <s-k>
+    map global visual-mode x <s-x>
 
     map global visual-line-mode j <s-j><a-x>
     map global visual-line-mode k <s-k><a-x>

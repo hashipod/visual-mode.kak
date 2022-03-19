@@ -34,7 +34,7 @@ provide-module visual-mode %{
 
         hook -once -always -group visual-mode global RawKey "^(?!%reg{k}).*" %{
             #echo -debug "executing key: %val{hook_param}"
-            execute-keys -with-hooks -with-maps -save-regs 'v' <esc> %val{hook_param}
+            execute-keys -with-hooks -with-maps -save-regs 'v' %val{hook_param}
         }
 
         # if we exited visual mode with esc, then don't leave the hook there
